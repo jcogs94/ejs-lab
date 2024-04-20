@@ -13,7 +13,7 @@
             <ul>
                 <h3><%= item.name %></h3>
                 <li><b>Price:</b> $<%= item.price %></li>
-                <li><b>Rating:</b> <%= item.rating %></li>
+                <li><b>Rating:</b> <% if (item.rating === 5) { %>⭐ <% }; %><%= item.rating %></li>
                 <li><b>About:</b> <%= item.details %></li>
             </ul>
         <% }); %>
