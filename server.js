@@ -61,10 +61,33 @@ app.get('/', (req, res) => {
 });
 
 app.get('/menu', (req, res) => {
-    res.render('menu.ejs', {
-      menu: RESTAURANT.menu
-    });
-})
+  res.render('menu.ejs', {
+    name: RESTAURANT.name,
+    menu: RESTAURANT.menu
+  });
+});
+
+app.get('/menu/:category', (req, res) => {
+  let category = '';
+
+  if (req.params.category === 'mains') {
+    category = 'mains';
+  } else if (req.params.category === 'desserts') {
+    category = 'desserts';
+  } else if (req.params.category === 'sides') {
+    category = 'sides';
+  }
+  
+  let menuItems = RESTAURANT.menu.filter( (item) => item.category === category);
+
+  category = category[0].toUpperCase() + category.slice(1);
+
+  res.render('category.ejs', {
+    name: RESTAURANT.name,
+    menuItems: menuItems,
+    category: category
+  });
+});
 
 app.listen(3000, () => {
     console.log('Server running on port 3000...');
