@@ -97,6 +97,9 @@ app.get('/menu/:category', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000...');
-});
+// For loop used to open multiple ports in conjunction with AWS server ports
+for (let port = 3000; port < 3011; port++) {
+  app.listen(port, () => {
+      console.log(`Server running on port ${port}...`);
+  });
+};
