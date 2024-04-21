@@ -10,6 +10,7 @@ const RESTAURANT = {
       { 
         id: 1,
         name: 'Quantum Quinoa Mushroom Burger',
+        img: 'https://images.pexels.com/photos/5474630/pexels-photo-5474630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         price: 13.00,
         rating: 4,
         category: 'mains',
@@ -18,6 +19,7 @@ const RESTAURANT = {
       { 
         id: 2,
         name: 'Binary Berry Cheesecake',
+        img: 'https://images.pexels.com/photos/4040770/pexels-photo-4040770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         price: 10.11,
         rating: 3,
         category: 'desserts',
@@ -26,6 +28,7 @@ const RESTAURANT = {
       { 
         id: 3,
         name: 'Recursive Rigatoni',
+        img: 'https://images.pexels.com/photos/18518556/pexels-photo-18518556/free-photo-of-pan-with-rigatoni-pasta-with-tomato-sauce-melted-cheese-and-sprinkled-with-basil.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         price: 17.00,
         rating: 5,
         category: 'mains',
@@ -34,6 +37,7 @@ const RESTAURANT = {
       { 
         id: 4,
         name: 'Pumpkin Pi Squared',
+        img: 'https://images.pexels.com/photos/248469/pexels-photo-248469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         price: 3.14,
         rating: 5,
         category: 'desserts',
@@ -42,6 +46,7 @@ const RESTAURANT = {
       { 
         id: 5,
         name: 'Fibonacci String Bean Fries',
+        img: 'https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         price: 11.23,
         rating: 5,
         category: 'sides',

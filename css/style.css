@@ -46,13 +46,33 @@ main > div {
     gap: 35px;
 }
 
-main > div > ul {
-    padding-left: 40px;
-    list-style-type: none;
+main > div > h3 {
+    text-align: center;
 }
 
-main > div > ul > * {
+.img-and-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.img-and-info > ul {
+    padding: 30px;
+    list-style-type: none;
+    max-width: 300px;
+    border: 1px solid black;
+}
+
+.img-and-info > ul > * {
     margin-bottom: 10px;
+}
+
+img {
+    max-width: 400px;
+    height: auto;
 }
 
 footer {
@@ -66,4 +86,27 @@ footer {
     width: 100%;
     background-color: lightgray;
     font-weight: 600;
+}
+
+@media (min-width: 438px) and (max-width: 540px) {
+    nav {
+        max-width: 421px;
+    }
+}
+
+@media (max-width: 800px) {
+    nav {
+        font-size: 1.2em;
+        padding: 20px 10px;
+        flex-wrap: wrap;
+    }
+
+    main > div > * {
+        margin: auto 15px;
+    }
+
+    footer {
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
 }
