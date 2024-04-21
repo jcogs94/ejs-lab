@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+// Added img properties to each menu item for css practice
+// Found each img from stock website at the following url:
+// https://www.pexels.com/
 const RESTAURANT = {
     name: 'The Green Byte Bistro',
     isOpen: true,
