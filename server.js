@@ -50,6 +50,8 @@ const RESTAURANT = {
     ]
 }
   
+// Experimenting with adding css files to app
+app.use('/css', express.static('css'));
 
 app.get('/', (req, res) => {
   res.render('home.ejs', {
