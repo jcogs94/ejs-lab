@@ -88,7 +88,7 @@ app.get('/menu/:category', (req, res) => {
     category = 'sides';
   }
   
-  let menuItems = RESTAURANT.menu.filter( (item) => item.category === category);
+  let menuSorted = RESTAURANT.menu.filter( (item) => item.category === category);
 
   category = category[0].toUpperCase() + category.slice(1);
 
@@ -97,7 +97,7 @@ app.get('/menu/:category', (req, res) => {
     address: RESTAURANT.address,
     phone: RESTAURANT.phone,
     isOpen: RESTAURANT.isOpen,
-    menuItems: menuItems,
+    menuItems: menuSorted,
     category: category
   });
 });

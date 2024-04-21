@@ -12,47 +12,14 @@
         <h1>Full Menu</h1>
         <div>
             <h2>Mains</h2>
-            <% menu.forEach( (item) => { %>
-                <% if (item.category === 'mains') { %>
-                    <h3><%= item.name %></h3>
-                    <div class="img-and-info">
-                        <img src="<%= item.img %>" alt="<%= item.name %>">
-                        <ul>
-                            <li><b>Price:</b> $<%= item.price %></li>
-                            <li><b>Rating:</b> <% if (item.rating === 5) { %>⭐ <% }; %><%= item.rating %></li>
-                            <li><b>About:</b> <%= item.details %></li>
-                        </ul>
-                    </div>
-                <% }; %>
-            <% }); %>
+            <% let menuItems = menu.filter( (item) => item.category === 'mains'); %>
+            <%- include('./partials/menuItems.ejs', {menuItems}) %>
             <h2>Desserts</h2>
-            <% menu.forEach( (item) => { %>
-                <% if (item.category === 'desserts') { %>
-                    <h3><%= item.name %></h3>
-                    <div class="img-and-info">
-                        <img src="<%= item.img %>" alt="<%= item.name %>">
-                        <ul>
-                            <li><b>Price:</b> $<%= item.price %></li>
-                            <li><b>Rating:</b> <% if (item.rating === 5) { %>⭐ <% }; %><%= item.rating %></li>
-                            <li><b>About:</b> <%= item.details %></li>
-                        </ul>
-                    </div>
-                <% }; %>
-            <% }); %>
+            <% menuItems = menu.filter( (item) => item.category === 'desserts'); %>
+            <%- include('./partials/menuItems.ejs', {menuItems}) %>
             <h2>Sides</h2>
-            <% menu.forEach( (item) => { %>
-                <% if (item.category === 'sides') { %>
-                    <h3><%= item.name %></h3>
-                    <div class="img-and-info">
-                        <img src="<%= item.img %>" alt="<%= item.name %>">
-                        <ul>
-                            <li><b>Price:</b> $<%= item.price %></li>
-                            <li><b>Rating:</b> <% if (item.rating === 5) { %>⭐ <% }; %><%= item.rating %></li>
-                            <li><b>About:</b> <%= item.details %></li>
-                        </ul>
-                    </div>
-                <% }; %>
-            <% }); %>
+            <% menuItems = menu.filter( (item) => item.category === 'sides'); %>
+            <%- include('./partials/menuItems.ejs', {menuItems}) %>
         </div>
     </main>
     <%- include('./partials/footer') %>

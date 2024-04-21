@@ -1,0 +1,11 @@
+<% menuItems.forEach( (item) => { %>
+    <h3><%= item.name %></h3>
+    <div class="img-and-info">
+        <img src="<%= item.img %>" alt="<%= item.name %>">
+        <ul>
+            <li><b>Price:</b> $<%= item.price %></li>
+            <li><b>Rating:</b> <% if (item.rating === 5) { %>⭐ <% }; %><%= item.rating %></li>
+            <li><b>About:</b> <%= item.details %></li>
+        </ul>
+    </div>
+<% }); %>
