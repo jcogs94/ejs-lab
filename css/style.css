@@ -6,20 +6,17 @@
 body {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
-    gap: 30px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    /* justify-self: flex-start; */
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    height: 50px;
+    gap: 50px;
+    padding: 20px 0;
     width: 100%;
     background-color: lightgray;
     font-size: 2em;
@@ -32,7 +29,30 @@ nav > a {
 }
 
 main {
-    /* justify-content: flex-start; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 80px 0;
+}
+
+main > h1 {
+    align-self: center;
+}
+
+main > div {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+main > div > ul {
+    padding-left: 40px;
+    list-style-type: none;
+}
+
+main > div > ul > * {
+    margin-bottom: 10px;
 }
 
 footer {
@@ -42,7 +62,7 @@ footer {
     align-items: center;
     gap: 50px;
     margin-top: auto;
-    height: 100px;
+    padding: 30px 0;
     width: 100%;
     background-color: lightgray;
     font-weight: 600;
