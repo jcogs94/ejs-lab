@@ -8,14 +8,9 @@
 </head>
 <body>
     <%- include('./partials/nav') %>
-    <h1>Home Page</h1>
-    <div>
-        <p><%= name %><br><%= address %><br><%= phone %></p>
-        <% if (isOpen) { %>
-            <p>Yes we are open!</p>
-        <% } else { %>
-            <p>Sorry, we are closed.</p>
-        <% } %>
-    </div>
+    <main>
+        <h1>Home Page</h1>
+    </main>
+    <%- include('./partials/footer') %>
 </body>
 </html>

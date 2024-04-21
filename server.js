@@ -65,6 +65,9 @@ app.get('/', (req, res) => {
 app.get('/menu', (req, res) => {
   res.render('menu.ejs', {
     name: RESTAURANT.name,
+    address: RESTAURANT.address,
+    phone: RESTAURANT.phone,
+    isOpen: RESTAURANT.isOpen,
     menu: RESTAURANT.menu
   });
 });
@@ -86,6 +89,9 @@ app.get('/menu/:category', (req, res) => {
 
   res.render('category.ejs', {
     name: RESTAURANT.name,
+    address: RESTAURANT.address,
+    phone: RESTAURANT.phone,
+    isOpen: RESTAURANT.isOpen,
     menuItems: menuItems,
     category: category
   });
